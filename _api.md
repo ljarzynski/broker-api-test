@@ -304,7 +304,7 @@ $ curl http://username:password@broker-url/v2/service_instances/:instance_id/las
 | 200 OK |  The expected response body is below. |
 |  410 GONE | Appropriate only for asynchronous delete operations. The platform should consider this response a success and remove the resource from its database. The expected response body is <code>{}</code>. Returning this while the platform is polling for create or update operations should be interpreted as an invalid response and the platform should continue polling.  |
 
-Responses with any other status code should be interpreted as an error or invalid response. The platform should continue polling until the broker returns a valid response or the [maximum polling duration](#polling-interval-and-duration) is reached. Brokers may use the `description` field to expose user-facing error messages about the operation state; for more info see [Broker Errors](api.html#broker-errors).
+Responses with any other status code should be interpreted as an error or invalid response. The platform should continue polling until the broker returns a valid response or the [maximum polling duration](#polling-interval-and-duration) is reached. Brokers may use the `description` field to expose user-facing error messages about the operation state; for more info see [Broker Errors](#broker-errors).
 
 ##### Body #####
 
