@@ -183,38 +183,53 @@ A web-friendly display name is camel-cased with spaces and punctuation supported
     },
     "plan_updateable": true,
     "plans": [{
-      "name": "fake-plan",
+      "name": "fake-plan-1",
       "id": "d3031751-XXXX-XXXX-XXXX-a42377d3320e",
       "description": "Shared fake Server, 5tb persistent disk, 40 max concurrent connections",
       "max_storage_tb": 5,
       "metadata": {
-        "cost": 0,
+        "costs":[
+            {
+               "amount":{
+                  "usd":99.0
+               },
+               "unit":"MONTHLY"
+            },
+            {
+               "amount":{
+                  "usd":0.99
+               },
+               "unit":"1GB of messages over 20GB"
+            }
+         ],
         "bullets": [{
-          "content": "Shared fake server"
-        }, {
-          "content": "5 TB storage"
-        }, {
-          "content": "40 concurrent connections"
+            "content": "Shared fake server"
+          }, {
+            "content": "5 TB storage"
+          }, {
+            "content": "40 concurrent connections"
         }]
       }
     }, {
-      "name": "fake-async-plan",
+      "name": "fake-plan-2",
       "id": "0f4008b5-XXXX-XXXX-XXXX-dace631cd648",
       "description": "Shared fake Server, 5tb persistent disk, 40 max concurrent connections. 100 async",
       "max_storage_tb": 5,
       "metadata": {
-        "cost": 0,
-        "bullets": [{
-          "content": "40 concurrent connections"
-        }]
-      }
-    }, {
-      "name": "fake-async-only-plan",
-      "id": "8d415f6a-XXXX-XXXX-XXXX-e61f3baa1c77",
-      "description": "Shared fake Server, 5tb persistent disk, 40 max concurrent connections. 100 async",
-      "max_storage_tb": 5,
-      "metadata": {
-        "cost": 0,
+        "costs":[
+            {
+               "amount":{
+                  "usd":199.0
+               },
+               "unit":"MONTHLY"
+            },
+            {
+               "amount":{
+                  "usd":0.99
+               },
+               "unit":"1GB of messages over 20GB"
+            }
+         ],
         "bullets": [{
           "content": "40 concurrent connections"
         }]
